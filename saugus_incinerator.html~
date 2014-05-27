@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaflet Quick Start Guide Example</title>
+	<meta charset="utf-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://mapknitter.org/javascripts/annotation.js?3"></script>
+	<link rel="stylesheet" href="http://leaflet.github.io/Leaflet.draw/leaflet.draw.css"/>
+	
+</head>
+<body>
+	<div id="map" style="width: 1200px; height: 400px"></div>
+
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script
+        src="http://leaflet.github.io/Leaflet.draw/leaflet.draw.js">
+    </script>
+	<script>
+
+		
+		var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+		    landUrl = 'http://mapknitter.org/tms/saugus-incinerator-landfill/:z/:x/:y.png';
+		    
+		var osmMap = L.tileLayer(osmUrl),
+    		landMap = L.tileLayer(landUrl);
+
+		var map = L.map('map', {
+		    layers: [osmMap] 
+	    })
+	    .setView([42.4390958322,-70.9882483666], 16);
+		
+		L.tileLayer('', {
+			maxZoom: 18,
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+				'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+			id: 'examples.map-i86knfo3'
+		}).addTo(map);
+		
+		$A.poly = new L.Polygon([[42.4391753576,-70.9891462326,5/296803],
+[42.4391753576,-70.9891462326,4/296802],
+[42.4389219869,-70.9893286228,3/296801],
+[42.4389932475,-70.9896504879,2/296800],
+[42.4393416316,-70.9896504879,1/296799],
+[42.4394999873,-70.9894251823,0/296798]
+],{color:"yellow"})
+  $A.poly.addTo(map).bindPopup("contaminated water? I'd love to take a sample")
+  $A.polygons['38'] = $A.poly
+  
+  $A.poly = new L.Polygon([[42.439832533,-70.9883737564,6/296804],
+[42.439832533,-70.9883737564,5/296810],
+[42.4396425071,-70.9878265858,4/296809],
+[42.4393495494,-70.9877085686,3/296808],
+[42.4392149467,-70.9890067577,2/296807],
+[42.4395712473,-70.9895217419,1/296806],
+[42.4398958749,-70.9892106056,0/296805]
+],{color:"blue"})
+  $A.poly.addTo(map).bindPopup("ash from incinerator")
+  $A.polygons['39'] = $A.poly
+  
+  $A.poly = new L.Polygon([[42.4411983274,-70.9851953387,12/297196],
+[42.4411983274,-70.9851953387,11/297194],
+[42.4411943687,-70.9851658344,10/297204],
+[42.4412161419,-70.9851229191,9/297198],
+[42.4414239776,-70.9850987792,8/297197],
+[42.4414754415,-70.985096097,7/297195],
+[42.4414972147,-70.9851309657,6/297193],
+[42.4415031528,-70.9851738811,5/297205],
+[42.441467524,-70.9852302074,4/297203],
+[42.4414318951,-70.9852302074,3/297202],
+[42.4413606372,-70.9852409363,2/297201],
+[42.4412656267,-70.9852409363,1/297200],
+[42.4412102038,-70.9852167964,0/297199]
+],{color:"orange"})
+  $A.poly.addTo(map).bindPopup("compost!")
+  $A.polygons['42'] = $A.poly
+  
+  $A.poly = new L.Polygon([[42.4412478122,-70.9855011106,15/297214],
+[42.4412478122,-70.9855011106,14/297213],
+[42.4412497916,-70.9854662418,13/297211],
+[42.4412913587,-70.985442102,12/297209],
+[42.4413725136,-70.9854099154,11/297207],
+[42.4414695034,-70.9853884578,10/297220],
+[42.4415229466,-70.9853857756,9/297212],
+[42.4415704518,-70.9854313731,8/297210],
+[42.4415625342,-70.9854742885,7/297208],
+[42.4415466992,-70.985506475,6/297206],
+[42.4414932559,-70.9855091572,5/297221],
+[42.4414299157,-70.9855172038,4/297219],
+[42.4413685548,-70.9855359793,3/297218],
+[42.4413071938,-70.9855601192,2/297217],
+[42.4412834412,-70.9855547547,1/297216],
+[42.4412537503,-70.9855386615,0/297215]
+],{color:"orange"})
+  $A.poly.addTo(map).bindPopup("compost!")
+  $A.polygons['43'] = $A.poly
+  
+  $A.poly = new L.Polygon([[42.4412953175,-70.9856808186,16/297232],
+[42.4412953175,-70.9856808186,15/297230],
+[42.4413190701,-70.985648632,14/297229],
+[42.4413665754,-70.98562181,13/297227],
+[42.4414200188,-70.98562181,12/297225],
+[42.4414635652,-70.9855762124,11/297223],
+[42.4415170085,-70.9855601192,10/297237],
+[42.441566493,-70.9855681658,9/297228],
+[42.4415803486,-70.9856003523,8/297226],
+[42.4415645136,-70.985648632,7/297224],
+[42.4415407611,-70.9856754541,6/297222],
+[42.4414338745,-70.9857290983,5/297238],
+[42.4414081425,-70.985750556,4/297236],
+[42.4413705342,-70.9857586026,3/297235],
+[42.4413349052,-70.9857586026,2/297234],
+[42.4413111526,-70.9857398272,1/297233],
+[42.4412953175,-70.9857022762,0/297231]
+],{color:"orange"})
+  $A.poly.addTo(map).bindPopup("compost!")
+  $A.polygons['44'] = $A.poly
+  
+  $A.poly = new L.Polygon([[42.4411389457,-70.9847313166,13/297255],
+[42.4411389457,-70.9847313166,12/297253],
+[42.4411923893,-70.9847044945,11/297251],
+[42.4413428228,-70.9846884012,10/297262],
+[42.4413883486,-70.9846562147,9/297256],
+[42.4413923074,-70.984621346,8/297254],
+[42.4413863693,-70.9845918417,7/297252],
+[42.4413507403,-70.9845757484,6/297250],
+[42.4412893793,-70.984570384,5/297263],
+[42.4410855021,-70.9846240282,4/297261],
+[42.4410815433,-70.9846615791,3/297260],
+[42.4410894609,-70.9847071767,2/297259],
+[42.4411132136,-70.9847339988,1/297258],
+[42.4411389457,-70.9847339988,0/297257]
+],{color:"orange"})
+  $A.poly.addTo(map).bindPopup("compost!")
+  $A.polygons['46'] = $A.poly
+  
+  $A.poly = new L.Polygon([[42.4386765331,-70.9883308411,5/344304],
+[42.4387082046,-70.9881162643,4/344303],
+[42.4386923688,-70.9876441956,3/344302],
+[42.4385656827,-70.9872794151,2/344301],
+[42.4380430994,-70.9880518913,1/344300],
+[42.4383756529,-70.9880304337,0/344299]
+],{color:"red"})
+  $A.poly.addTo(map).bindPopup("")
+  $A.polygons['62'] = $A.poly
+  
+  $A.poly = false
+
+  notes = [{"node":{"way_id":0,"name":"","lon":-70.9891033173,"created_at":"2013-01-28T19:33:58Z","body":"<a href=\"http://www.flickr.com/photos/50628274@N00/7155077492/\" title=\"Mapping Saugus, MA, Landfill by kanarinka, on Flickr\"><img src=\"http://farm6.staticflickr.com/5194/7155077492_7e4fa6097a_m.jpg\" width=\"240\" height=\"159\" alt=\"Mapping Saugus, MA, Landfill\"></a>","author":"warren","updated_at":"2013-01-28T19:33:58Z","order":0,"id":297277,"color":"red","description":"","lat":42.4404976192,"way_order":0,"map_id":624}}]
+  $.each(notes,function(i,note) {
+    note = note['node']
+    description = note['body']
+    
+    if (note['author'] == 'anishshah101') {
+      description += " (<a href='#' onClick='$A.delete_point("+note['id']+")'>x</a>)"
+    }
+    
+    lat = note['lat']
+    lon = note['lon']
+    marker = L.marker([lat,lon])
+    $A.points[""+note['id']] = marker
+    marker.addTo(map).bindPopup(description)
+  })
+
+  $A.initialize({
+    map_id: 624,
+    map_name: "saugus-incinerator-landfill"
+  })
+
+	var drawnItems = new L.FeatureGroup();
+        map.addLayer(drawnItems);
+
+        var drawControl = new L.Control.Draw({
+            edit: {
+                featureGroup: drawnItems
+            }
+        });
+        map.addControl(drawControl);
+
+        map.on('draw:created', function (e) {
+            var type = e.layerType,
+                layer = e.layer;
+            drawnItems.addLayer(layer);
+        });
+        
+        
+	</script>
+</body>
+</html>
+
